@@ -6,6 +6,7 @@
     <title>أضواء الإحتراف | LIGHTS PRO - بث مباشر وتصوير بودكاست</title>
     <meta name="description" content="أضواء الإحتراف - مؤسسة متخصصة في البث المباشر للاجتماعات والمناسبات وتصوير البودكاست في الرياض">
     <meta name="theme-color" content="#2C2F75">
+    <link rel="icon" href="logo-icon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -55,35 +56,13 @@
         }
 
         .hero-logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 1.5rem;
-            background: var(--white);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
         }
 
-        .hero-logo svg {
-            width: 80px;
-            height: 80px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900;
-            margin-bottom: 0.3rem;
-            letter-spacing: 1px;
-        }
-
-        .hero .en-name {
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
-            font-weight: 600;
-            letter-spacing: 4px;
-            opacity: 0.85;
-            margin-bottom: 1rem;
+        .hero-logo img {
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
         }
 
         .hero .tagline {
@@ -233,9 +212,7 @@
             text-align: center;
         }
 
-        .why-item {
-            padding: 1.5rem;
-        }
+        .why-item { padding: 1.5rem; }
 
         .why-number {
             font-size: 2.5rem;
@@ -280,9 +257,7 @@
             box-shadow: 0 15px 40px rgba(44,47,117,0.12);
         }
 
-        .package-card.featured {
-            border: 3px solid var(--gold);
-        }
+        .package-card.featured { border: 3px solid var(--gold); }
 
         .package-badge {
             position: absolute;
@@ -361,14 +336,10 @@
             color: var(--gold);
         }
 
-        .portfolio-note p {
-            line-height: 1.8;
-            opacity: 0.9;
-        }
+        .portfolio-note p { line-height: 1.8; opacity: 0.9; }
 
         /* ===== CONTACT ===== */
         .contact { background: var(--navy); color: var(--white); }
-
         .contact .section-title { color: var(--white); }
         .contact .section-subtitle { color: rgba(255,255,255,0.6); }
 
@@ -422,6 +393,7 @@
         }
 
         .contact-form input,
+        .contact-form select,
         .contact-form textarea {
             padding: 0.9rem 1.2rem;
             border-radius: 10px;
@@ -433,12 +405,15 @@
             transition: border-color 0.3s;
         }
 
+        .contact-form select option { color: #333; background: white; }
+
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
             color: rgba(255,255,255,0.4);
         }
 
         .contact-form input:focus,
+        .contact-form select:focus,
         .contact-form textarea:focus {
             outline: none;
             border-color: var(--gold);
@@ -446,9 +421,7 @@
 
         .contact-form textarea { resize: vertical; min-height: 120px; }
 
-        .contact-form .btn-primary {
-            align-self: flex-start;
-        }
+        .contact-form .btn-primary { align-self: flex-start; }
 
         /* ===== FOOTER ===== */
         footer {
@@ -457,6 +430,13 @@
             text-align: center;
             padding: 1.5rem;
             font-size: 0.85rem;
+        }
+
+        .footer-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 0.8rem;
+            opacity: 0.7;
         }
 
         /* ===== NAVBAR ===== */
@@ -481,10 +461,14 @@
         }
 
         .nav-brand {
-            color: var(--white);
-            font-weight: 900;
-            font-size: 1.2rem;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand img {
+            height: 40px;
+            width: auto;
         }
 
         .nav-links {
@@ -531,7 +515,6 @@
         }
 
         .whatsapp-fab:hover { transform: scale(1.1); }
-
         .whatsapp-fab svg { width: 32px; height: 32px; fill: white; }
 
         /* ===== RESPONSIVE ===== */
@@ -549,20 +532,14 @@
             }
 
             .nav-links.open { display: flex; }
-
             .nav-toggle { display: block; }
-
             .hero { padding: 2rem 1.5rem; }
-
             section { padding: 3.5rem 1.5rem; }
-
             .contact-form .btn-primary { align-self: stretch; }
         }
 
-        /* ===== SMOOTH SCROLL ===== */
         html { scroll-behavior: smooth; }
 
-        /* ===== ANIMATIONS ===== */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -577,9 +554,30 @@
 </head>
 <body>
 
-<!-- Navbar -->
+<!--
+==========================================================
+  دليل التعديل السريع
+  ─────────────────────
+  1. رقم الواتساب: ابحث عن PHONE_NUMBER وغيّره لرقمك (مثال: 966501234567)
+  2. البريد الإلكتروني: ابحث عن EMAIL_ADDRESS وغيّره
+  3. الأسعار: ابحث عن "باقاتنا" وعدّل الأرقام مباشرة
+  4. الخدمات: ابحث عن "خدماتنا" وعدّل النصوص
+==========================================================
+-->
+
+<!-- ======= ضع رقم الواتساب هنا (بدون + أو مسافات) ======= -->
+<script>
+    // غيّر هذا الرقم لرقم واتسابك الحقيقي
+    const PHONE_NUMBER = '966XXXXXXXXX';
+    // غيّر هذا لبريدك الإلكتروني
+    const EMAIL_ADDRESS = 'info@lightspro.sa';
+</script>
+
+<!-- Navbar — يستخدم الشعار الأبيض الأفقي -->
 <nav class="navbar" id="navbar">
-    <a href="#" class="nav-brand">LIGHTS PRO</a>
+    <a href="#" class="nav-brand">
+        <img src="logo-white-horizontal.png" alt="أضواء الإحتراف - LIGHTS PRO">
+    </a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="فتح القائمة">&#9776;</button>
     <ul class="nav-links">
         <li><a href="#services">خدماتنا</a></li>
@@ -589,26 +587,14 @@
     </ul>
 </nav>
 
-<!-- Hero -->
+<!-- Hero — يستخدم الشعار الأبيض الرئيسي -->
 <section class="hero" id="hero">
     <div class="hero-logo">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#CA3B67"/>
-                    <stop offset="50%" style="stop-color:#723374"/>
-                    <stop offset="100%" style="stop-color:#2C2F75"/>
-                </linearGradient>
-            </defs>
-            <rect x="10" y="10" width="80" height="80" rx="4" fill="url(#g1)"/>
-            <path d="M50 50 L10 15 M50 50 L90 15 M50 50 L90 85 M50 50 L10 85 M50 50 L50 10 M50 50 L85 50" stroke="white" stroke-width="5" stroke-linecap="round"/>
-        </svg>
+        <img src="logo-white.png" alt="أضواء الإحتراف">
     </div>
-    <h1>أضواء الإحتراف</h1>
-    <div class="en-name">LIGHTS PRO</div>
-    <div class="tagline">نحو الإحتراف</div>
+    <div class="tagline">نحو الإحتراف في البث المباشر وتصوير البودكاست</div>
     <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">اطلب عرض سعر</a>
+        <a href="javascript:void(0)" onclick="openWhatsApp('أرغب بالحصول على عرض سعر')" class="btn btn-primary">اطلب عرض سعر</a>
         <a href="#services" class="btn btn-outline">تعرّف على خدماتنا</a>
     </div>
     <div class="scroll-hint">
@@ -616,7 +602,7 @@
     </div>
 </section>
 
-<!-- Services -->
+<!-- ===== خدماتنا — عدّل النصوص حسب خدماتك ===== -->
 <section class="services" id="services">
     <div class="container">
         <h2 class="section-title fade-up">خدماتنا</h2>
@@ -641,7 +627,7 @@
     </div>
 </section>
 
-<!-- Why Us -->
+<!-- لماذا نحن -->
 <section class="why-us" id="why-us">
     <div class="container">
         <h2 class="section-title fade-up">لماذا أضواء الإحتراف؟</h2>
@@ -671,12 +657,14 @@
     </div>
 </section>
 
-<!-- Packages -->
+<!-- ===== باقاتنا — عدّل الأسعار والمحتوى هنا ===== -->
 <section class="packages" id="packages">
     <div class="container">
         <h2 class="section-title fade-up">باقاتنا</h2>
         <p class="section-subtitle fade-up">اختر الباقة المناسبة لاحتياجاتك</p>
         <div class="packages-grid">
+
+            <!-- ====== باقة 1: البودكاست ====== -->
             <div class="package-card fade-up">
                 <h3>باقة البودكاست</h3>
                 <div class="package-price">1,500 <span>ر.س / حلقة</span></div>
@@ -687,8 +675,10 @@
                     <li>مونتاج أساسي</li>
                     <li>تسليم خلال 3 أيام</li>
                 </ul>
-                <a href="#contact" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">اطلب الباقة</a>
+                <a href="javascript:void(0)" onclick="openWhatsApp('أرغب بحجز باقة البودكاست - 1,500 ر.س')" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">احجز الآن</a>
             </div>
+
+            <!-- ====== باقة 2: البث المباشر ====== -->
             <div class="package-card featured fade-up">
                 <div class="package-badge">الأكثر طلباً</div>
                 <h3>باقة البث المباشر</h3>
@@ -701,8 +691,10 @@
                     <li>تسجيل كامل للفعالية</li>
                     <li>بث على منصتين</li>
                 </ul>
-                <a href="#contact" class="btn btn-primary">اطلب الباقة</a>
+                <a href="javascript:void(0)" onclick="openWhatsApp('أرغب بحجز باقة البث المباشر - 5,000 ر.س')" class="btn btn-primary">احجز الآن</a>
             </div>
+
+            <!-- ====== باقة 3: التغطية الشاملة ====== -->
             <div class="package-card fade-up">
                 <h3>باقة التغطية الشاملة</h3>
                 <div class="package-price">12,000 <span>ر.س</span></div>
@@ -714,13 +706,14 @@
                     <li>5 كاميرات + مخرج</li>
                     <li>تسليم خلال 5 أيام</li>
                 </ul>
-                <a href="#contact" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">اطلب الباقة</a>
+                <a href="javascript:void(0)" onclick="openWhatsApp('أرغب بحجز باقة التغطية الشاملة - 12,000 ر.س')" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">احجز الآن</a>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- Portfolio placeholder -->
+<!-- أعمالنا -->
 <section class="portfolio" id="portfolio">
     <div class="container">
         <h2 class="section-title fade-up">أعمالنا</h2>
@@ -729,12 +722,12 @@
             <h3>قريباً...</h3>
             <p>نعمل حالياً على بناء معرض أعمالنا. تواصل معنا للحصول على عرض تجريبي مجاني واحكم بنفسك على جودة عملنا.</p>
             <br>
-            <a href="#contact" class="btn btn-primary">احجز عرضك التجريبي المجاني</a>
+            <a href="javascript:void(0)" onclick="openWhatsApp('أرغب بحجز عرض تجريبي مجاني')" class="btn btn-primary">احجز عرضك التجريبي المجاني</a>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
+<!-- تواصل معنا -->
 <section class="contact" id="contact">
     <div class="container">
         <h2 class="section-title fade-up">تواصل معنا</h2>
@@ -752,14 +745,14 @@
                     <div class="contact-icon">&#128222;</div>
                     <div>
                         <h4>الهاتف</h4>
-                        <a href="tel:+966XXXXXXXXX" dir="ltr">+966 XX XXX XXXX</a>
+                        <a id="phone-link" href="#" dir="ltr"></a>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">&#128231;</div>
                     <div>
                         <h4>البريد الإلكتروني</h4>
-                        <a href="mailto:info@lightspro.sa">info@lightspro.sa</a>
+                        <a id="email-link" href="#"></a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -771,52 +764,76 @@
                 </div>
             </div>
             <form class="contact-form fade-up" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="الاسم" required>
-                <input type="tel" placeholder="رقم الجوال" required>
-                <input type="text" placeholder="نوع الخدمة المطلوبة">
-                <textarea placeholder="تفاصيل إضافية..."></textarea>
-                <button type="submit" class="btn btn-primary">أرسل الطلب</button>
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الجوال" required>
+                <select name="service">
+                    <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                    <option value="بث مباشر">بث مباشر</option>
+                    <option value="تصوير بودكاست">تصوير بودكاست</option>
+                    <option value="تغطية مناسبة">تغطية مناسبة</option>
+                    <option value="عرض تجريبي مجاني">عرض تجريبي مجاني</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+                <textarea name="details" placeholder="تفاصيل إضافية (التاريخ، المكان، عدد الحضور...)"></textarea>
+                <button type="submit" class="btn btn-primary">أرسل عبر واتساب</button>
             </form>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer — يستخدم الشعار الأبيض -->
 <footer>
+    <img src="logo-white-horizontal.png" alt="أضواء الإحتراف" class="footer-logo">
     <p>&copy; 2026 أضواء الإحتراف | LIGHTS PRO — جميع الحقوق محفوظة</p>
 </footer>
 
-<!-- WhatsApp FAB -->
-<a href="https://wa.me/966XXXXXXXXX?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" class="whatsapp-fab" aria-label="تواصل عبر واتساب">
+<!-- WhatsApp FAB — الزر العائم -->
+<a href="javascript:void(0)" onclick="openWhatsApp('مرحباً، أرغب بالاستفسار عن خدماتكم')" class="whatsapp-fab" aria-label="تواصل عبر واتساب">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-// Navbar scroll effect
+// ===== ربط رقم الهاتف والبريد تلقائياً =====
+const phoneEl = document.getElementById('phone-link');
+const emailEl = document.getElementById('email-link');
+phoneEl.href = 'tel:+' + PHONE_NUMBER;
+phoneEl.textContent = '+' + PHONE_NUMBER.replace(/(\d{3})(\d{2})(\d{3})(\d{4})/, '$1 $2 $3 $4');
+emailEl.href = 'mailto:' + EMAIL_ADDRESS;
+emailEl.textContent = EMAIL_ADDRESS;
+
+// ===== فتح واتساب مع رسالة جاهزة =====
+function openWhatsApp(message) {
+    const url = 'https://wa.me/' + PHONE_NUMBER + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+
+// ===== إرسال النموذج عبر واتساب =====
+function handleSubmit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const msg = [
+        'مرحباً، أرغب بالتواصل معكم',
+        '---',
+        'الاسم: ' + f.name.value,
+        'الجوال: ' + f.phone.value,
+        'الخدمة: ' + f.service.value,
+        'التفاصيل: ' + f.details.value
+    ].join('\n');
+    openWhatsApp(msg);
+}
+
+// ===== Navbar scroll =====
 window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Fade-up animation
+// ===== Fade-up animation =====
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// Form handler — sends via WhatsApp
-function handleSubmit(e) {
-    e.preventDefault();
-    const f = e.target;
-    const name = f.querySelector('input[type="text"]').value;
-    const phone = f.querySelector('input[type="tel"]').value;
-    const service = f.querySelectorAll('input[type="text"]')[1].value;
-    const details = f.querySelector('textarea').value;
-    const msg = `مرحباً، أنا ${name}%0Aرقم الجوال: ${phone}%0Aالخدمة: ${service}%0A${details}`;
-    window.open('https://wa.me/966XXXXXXXXX?text=' + msg, '_blank');
-}
-
-// Close mobile menu on link click
+// ===== Close mobile menu =====
 document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
 });
